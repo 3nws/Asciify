@@ -17,6 +17,8 @@ var Asciify = function(imageInput, overrides) {
 
     const NEWLINE = options.html ? "<br>" : "\n";
 
+    options.map += " ".repeat(options.threshold);
+
     options.map = options.map.split("");
     if (options.html) {
       for (let i = 0, l = options.map.length; i < l; i++) {
@@ -83,6 +85,7 @@ Asciify.maps = {
 Asciify.defaults = {
   width: 100,
   map: Asciify.maps.TEN,
+  threshold: 50,
   resolutionY: 0.6,
   html: false,
   transparencyAsWhite: false

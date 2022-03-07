@@ -1,5 +1,6 @@
 let formInput = document.getElementById("form_input");
 let widthInput = document.getElementById("width_input");
+let thresholdInput = document.getElementById("threshold_input");
 let mapInput = document.getElementById("map_input");
 let resolutionYInput = document.getElementById("resy_input");
 
@@ -12,6 +13,7 @@ function refresh(image) {
     html: true,
     resolutionY: resolutionYInput.value || Asciify.defaults.resolutionY,
     width: widthInput.value || Asciify.defaults.width,
+    threshold: thresholdInput.value || Asciify.defaults.threshold,
     map: Asciify.maps[mapInput.value],
     transparencyAsWhite: true
   });
@@ -31,7 +33,7 @@ formInput.addEventListener("change", function() {
   reader.readAsDataURL(this.files[0]);
 });
 
-[widthInput, mapInput, resolutionYInput].forEach(elem => {
+[widthInput, mapInput, thresholdInput, resolutionYInput].forEach(elem => {
   elem.addEventListener("input", e => {
     if (image) {
       refresh(image);
