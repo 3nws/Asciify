@@ -17,7 +17,7 @@ var Asciify = function(imageInput, overrides) {
 
     const NEWLINE = options.html ? "<br>" : "\n";
 
-    options.map += " ".repeat(options.threshold);
+    options.map += " ".repeat(Math.floor(options.threshold / 5));
 
     options.map = options.map.split("");
     if (options.html) {
@@ -74,6 +74,7 @@ var Asciify = function(imageInput, overrides) {
 };
 
 Asciify.maps = {
+  "THIRTY_ONE": "313131313131313131313131313131313131 ",
   "TEN": "@#%*+=-:. ",
   "FIVE": "@=:. ",
   "FIVE_BLOCK": "█▓▒░ ",
