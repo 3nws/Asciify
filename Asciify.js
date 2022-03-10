@@ -74,8 +74,9 @@ var Asciify = function(imageInput, overrides) {
 };
 
 Asciify.maps = {
-  "THIRTY_ONE": "313131313131313131313131313131313131 ",
+  "THIRTY_ONE": "31313131 ",
   "TEN": "@#%*+=-:. ",
+  "SEVEN": ">£#$½{[]}\|@€₺i¨~æß´` ",
   "FIVE": "@=:. ",
   "FIVE_BLOCK": "█▓▒░ ",
   "FOUR_BLOCK": "█▓▒░",
